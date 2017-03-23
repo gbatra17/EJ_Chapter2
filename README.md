@@ -21,3 +21,21 @@ for(var count = 1; count <= 100; count++){
   }  else {console.log(count);}
 }
 ```
+
+Chess-Board:
+```
+function chessboard(size){
+  var string = "";
+  for (var y = 1; y <= size; y++) {   
+  for (var x = 1; x <= size; x++) {
+    if ((x + y) % 2 === 0)
+      string += " ";
+    else
+      string += "#";
+  }
+  string += "\n";
+  }
+console.log(string);  
+}
+chessboard(8);
+```
