@@ -16,3 +16,14 @@ return sum;
 }
 console.log(sum(range(1, 10)));
 ```
+
+Reversing An Array
+```
+function reverseArray(array){
+var newArray = [];
+for(var i = 0; i <array.length; i++){
+newArray.unshift(array[i]);
+}
+return newArray;
+}
+```
