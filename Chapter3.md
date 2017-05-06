@@ -27,21 +27,37 @@ return true;
 ```
 
 Bean Counting
+//In this task we are asked to create a function that inputs a string and outputs the number of times a character appears in the string. 
 ```
-function countChar(string, character){
-var array = string.split("");
+function countBs(string){
+var splitString = string.split('');
 var count = 0;
-for(var i = 0; i < array.length; i++){
-  if(array[i] === character){
-	count++;
-  }
-}
+splitString.forEach(function(char){
+  if(char === 'B'){
+    count++;
+}});
 return count;
 }
 
-countChar("Garima Batra", "a"); // 4
-
-function countBs(string){
-return countChar(string, "B");
+function countChar(string, char){
+var splitString = string.split('');
+var count = 0;
+splitString.forEach(function(e){
+  if(e === char){
+    count++;
+}});
+return count;
 }
+
+//Using countChar as an innerfunction to re-define countBs.
+function rewrittenCountBs(string){
+return countChar(string, 'B');
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
+console.log(rewrittenCountBs("BBC"));
+// 2
 ```
